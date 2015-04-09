@@ -26,7 +26,12 @@
 	* 两者的应用场景，debug模式下：如果java代码、jsp修改了，是否需要重启服务器？
 * maven project使用archtype-webapp，如何当作web应用来运行和调试？
 	* 参考：[使用Eclipse构建Maven的SpringMVC项目][使用Eclipse构建Maven的SpringMVC项目]，实际上，直接配置server，部署工程即可；
-* 
+
+	
+说明：
+
+* 暂时不提git的配置和使用；
+* Eclipse/MyEclipse下Git的使用；
 
 
 
@@ -56,6 +61,26 @@
 ###Maven 管理 web project
 
 Maven 管理的 web project，在其他地方，作为Maven project导入时，会生成为web project吗？即，本质上，web project与普通的java project之间的差异在哪儿？配置文件中是否有体现，Maven的pom.xml文件中有体现吗？
+
+新建一个普通的maven project，然后使用webapp的archetype。
+
+
+###Maven管理 Spring webmvc项目，应该添加哪些依赖？
+
+具体依赖如下：
+
+	<properties>
+	  <spring.version>4.1.6.RELEASE</spring.version>
+	</properties>
+	...
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+
+思考：上述依赖的指定地点在哪？官网有没有参考来源。正常情况下spring-context、spring-web、spring-webmvc之间已经有了一个相互依赖关系，例如，spring-webmvc依赖于spring-web，spring-web依赖于spring-context，即，通过maven在依赖中添加spring-webmvc即可将上述spring-context、spring-web、spring-webmvc添加到编译路径中，这个需要对Spring有深入理解、梳理，才能有这样的认识。
 
 
 ###servlet api
