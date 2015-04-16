@@ -2,7 +2,7 @@
 #Java Web with Spring、Hibernate、Myibatis
 
 
-目标：快速搭建基本架构
+目标：快速搭建基本架构，理清楚一二三步骤。
 
 基本思路：
 
@@ -11,23 +11,33 @@
 	* Spring 官网介绍；无奈，[官网例子][Serving Web Content with Spring MVC]中使用了Spring Boot，暂时我只想使用最原始的Spring；
 	* [官网参考文档][Spring Framework Reference Documentation]，其中有详尽的解释，但没有完整的例子；
 
-##maven project：spring web
+##maven project：spring web demo 1，基本结构
 
 > 原文地址：[Spring MVC HelloWorld Using Maven in Eclipse][Spring MVC HelloWorld Using Maven in Eclipse]，其中对每一步骤有详尽的说明；
 
-具体步骤：
+对应工程`springwebdemo1`，具体步骤：
 
 * 创建Maven Project，选定webapp的archtype；
 * 添加Spring相应组件的依赖；
 * 添加Spring需要的beans：在上下文中登记注册bean、设置web页面的前端渲染等；
-* 启动并进行调试；
+* `Run As`--`Run On Server`，启动并进行调试；
 
+
+备注；如果希望包含JSTL标签，可参考[Spring MVC Tutorial – Setter Dependency Injection][Spring MVC Tutorial – Setter Dependency Injection]。
 
 
 几个问题（TODO）：
 
 * 在pom.xml中指定插件的版本信息：`maven-compiler-plugin`，`maven-war-plugin`等插件，对应于mvn操作的几个声明周期步骤；
-
+* Spring web工程启动、运行的基本过程；
+* Spring中session内容会进行管理吗？
+* Spring中进行用户权限管理，如何进行的？不同角色用户，看到不同的内容/文字；
+* JSP中如何与JSTL集成？
+* 如何与Hibernate集成？
+* 如何与Myibatis集成？
+* 如何通过Spring JDBC直接操作数据库？
+* 与数据库连接后，如何进行事务管理？
+* Spring中的AOP？
 
 
 
@@ -52,6 +62,11 @@
 	/target
 
 上述几项的具体含义？即，对于Eclipse下的Maven project来说`.classpath`、`.project`、`.settings/`中的内容是什么？有什么用？为什么不提交到git仓库中？
+
+工程的目录结构；
+
+
+
 
 ###错误：javax.servlet.http.HttpServlet找不到
 
@@ -212,8 +227,8 @@
 
 几点，思考：
 
-* 上述第一行`<%@ ... %>`的详细解释？
-* `<meta>` 标签的详细解释？
+* 上述第一行`<%@ ... %>`的详细解释？上面出现的编码方式，什么情况？
+* `<meta>` 标签的详细解释？指定的编码方式有约束吗？
 
 
 ###错误：“Dynamic Web Module 3.0 requires Java 1.6 or newer.
@@ -247,6 +262,7 @@
 * [Spring MVC HelloWorld Using Maven in Eclipse][Spring MVC HelloWorld Using Maven in Eclipse]
 * [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误][解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]
 * [How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse][How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]
+* [通过XML方式设置依赖注入][Spring MVC Tutorial – Setter Dependency Injection]
 
 
 
@@ -255,7 +271,8 @@
 [Spring Framework Reference Documentation]:		http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/
 [Spring Reference - Dependency Management]:		http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#dependency-management
 
-[Spring MVC HelloWorld Using Maven in Eclipse]:	http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+[Spring MVC HelloWorld Using Maven in Eclipse]:						http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+[Spring MVC Tutorial – Setter Dependency Injection]:				http://www.programcreek.com/2014/02/spring-mvc-tutorial-setter-dependency-injection/
 [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]:		http://xiaoyaozjl.iteye.com/blog/1530010	
 [How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]:			http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
 

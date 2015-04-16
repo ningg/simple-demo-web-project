@@ -32,7 +32,7 @@
 说明：
 
 * 暂时不提git的配置和使用；
-* Eclipse/MyEclipse下Git的使用；
+* Eclipse/MyEclipse下Git的使用；*（Git的视图）*
 
 
 
