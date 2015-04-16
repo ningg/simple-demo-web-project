@@ -246,7 +246,7 @@
 
 * [Spring MVC HelloWorld Using Maven in Eclipse][Spring MVC HelloWorld Using Maven in Eclipse]
 * [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误][解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]
-
+* [How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse][How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]
 
 
 
@@ -257,6 +257,6 @@
 
 [Spring MVC HelloWorld Using Maven in Eclipse]:	http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
 [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]:		http://xiaoyaozjl.iteye.com/blog/1530010	
-
+[How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]:			http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
 
 
