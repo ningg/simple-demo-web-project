@@ -1,5 +1,6 @@
 # simple-demo-web-project
-基本的产品原型设计、基本的工程开发代码
+
+基本的product protype、基本的web framework。
 
 
 
@@ -45,7 +46,11 @@
 
 * [使用spring4.0+maven构建超简单的web项目][使用spring4.0+maven构建超简单的web项目]
 * [Spring framework reference][Spring framework reference]
-
+* 几篇blog，未整理集合：
+	* [Java Enterprise Edition，Java EE，J2EE][Java Enterprise Edition，Java EE，J2EE]
+	* [Spring搭建 java web 的基本架子][Spring搭建 java web 的基本架子]
+	* [java web简介][java web简介]
+	* [Web相关的Specifications][Web相关的Specifications]
 
 
 
@@ -121,4 +126,8 @@ Maven 管理的 web project，在其他地方，作为Maven project导入时，�
 [The superclass “javax.servlet.http.HttpServlet” was not found on the Java Build Path 2]:	http://stackoverflow.com/questions/26936848/the-superclass-javax-servlet-http-httpservlet-was-not-found-on-the-java-build
 [使用Eclipse构建Maven的SpringMVC项目]:			http://limingnihao.iteye.com/blog/830409
 
+[Java Enterprise Edition，Java EE，J2EE]:		http://ningg.top/java-enterprise-edition/
+[Spring搭建 java web 的基本架子]:				http://ningg.top/spring-java-web/
+[java web简介]:									http://ningg.top/java-web-intro/
+[Web相关的Specifications]:						http://ningg.top/web-application-specifications/
 
