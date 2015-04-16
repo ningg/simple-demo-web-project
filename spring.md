@@ -20,6 +20,15 @@
 * 创建Maven Project，选定webapp的archtype；
 * 添加Spring相应组件的依赖；
 * 添加Spring需要的beans：在上下文中登记注册bean、设置web页面的前端渲染等；
+* 启动并进行调试；
+
+
+
+几个问题（TODO）：
+
+* 在pom.xml中指定插件的版本信息：`maven-compiler-plugin`，`maven-war-plugin`等插件，对应于mvn操作的几个声明周期步骤；
+
+
 
 
 
@@ -44,7 +53,7 @@
 
 上述几项的具体含义？即，对于Eclipse下的Maven project来说`.classpath`、`.project`、`.settings/`中的内容是什么？有什么用？为什么不提交到git仓库中？
 
-###javax.servlet.http.HttpServlet找不到
+###错误：javax.servlet.http.HttpServlet找不到
 
 
 报错：javax.servlet.http.HttpServlet 找不到。
@@ -143,14 +152,15 @@
 
 文件样本如下：
 
+	<?xml version="1.0" encoding="UTF-8"?>
 	<beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:context="http://www.springframework.org/schema/context"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="
 			http://www.springframework.org/schema/beans
-			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+			http://www.springframework.org/schema/beans/spring-beans.xsd
 			http://www.springframework.org/schema/context
-			http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+			http://www.springframework.org/schema/context/spring-context.xsd">
 
 		<context:component-scan base-package="com.programcreek.helloworld.controller" />
 
@@ -173,6 +183,58 @@
 * 上述`schemaLocation`中指定的校验文件位置，哪里给出的参考？
 * [Spring 官网参考文档][Spring Framework Reference Documentation]在`XML Schema-based configuration`中详细介绍了`beans schema`和`context schema`；
 * 上述`context:component-scan`和设置前端渲染的配置，具体含义和作用是什么？`component-scan`能否进行模糊匹配？怎么设置？
+* 设置Eclipse不允许其进行进行Validation，否则，上述xml文件由于验证文件的问题，会一直提示出错；
+
+
+###JSP页面
+
+
+文件index.jsp文件内容如下：
+
+	<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1"%>
+	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" >
+		<title>Spring 4 MVC - HelloWorld Index Page</title>
+	</head>
+	<body>
+		<div>
+			<h2>Hello World!</h2>
+			<h3>
+				<a href="hello?name=Eric">Click Here.</a>
+			</h3>
+		</div>
+	</body>
+	</html>
+
+
+
+几点，思考：
+
+* 上述第一行`<%@ ... %>`的详细解释？
+* `<meta>` 标签的详细解释？
+
+
+###错误：“Dynamic Web Module 3.0 requires Java 1.6 or newer.
+
+
+在pom.xml中，添加如下配置：
+
+	<plugins>  
+		<plugin>  
+			<groupId>org.apache.maven.plugins</groupId>  
+			<artifactId>maven-compiler-plugin</artifactId>  
+			<version>2.3.2</version>  
+			<configuration>  
+				<source>1.6</source>  
+				<target>1.6</target>  
+			</configuration>  
+		</plugin>  
+	</plugins>  
+
+
+然后，`Maven`--`Update Project Configuration`即可；*（快捷键`Alt + F5`）*
 
 
 
@@ -183,7 +245,7 @@
 ##参考来源
 
 * [Spring MVC HelloWorld Using Maven in Eclipse][Spring MVC HelloWorld Using Maven in Eclipse]
-
+* [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误][解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]
 
 
 
@@ -191,9 +253,10 @@
 
 [Serving Web Content with Spring MVC]:			http://spring.io/guides/gs/serving-web-content/
 [Spring Framework Reference Documentation]:		http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/
-[Spring MVC HelloWorld Using Maven in Eclipse]:	http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
 [Spring Reference - Dependency Management]:		http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#dependency-management
-[Spring Framework Reference Documentation]:		http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/
+
+[Spring MVC HelloWorld Using Maven in Eclipse]:	http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+[解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]:		http://xiaoyaozjl.iteye.com/blog/1530010	
 
 
 
