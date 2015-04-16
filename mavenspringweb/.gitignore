@@ -1,9 +1,0 @@
-# Build and Release Folders
-
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Maven
-/target
