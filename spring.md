@@ -252,6 +252,12 @@
 然后，`Maven`--`Update Project Configuration`即可；*（快捷键`Alt + F5`）*
 
 
+###错误：Java compiler level does not match the version of the installed Java project facet
+
+
+选择项目属性`Properties`--`Project Facets`，将`Dynamic Web Module`版本调整为 3.0，将`Java`版本调整为`1.6`。
+
+
 
 
 
@@ -263,7 +269,7 @@
 * [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误][解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]
 * [How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse][How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]
 * [通过XML方式设置依赖注入][Spring MVC Tutorial – Setter Dependency Injection]
-
+* [Eclipse下Java compiler level does not match the version of the installed Java project facet的问题][Eclipse下Java compiler level does not match the version of the installed Java project facet的问题]
 
 
 
@@ -275,5 +281,5 @@
 [Spring MVC Tutorial – Setter Dependency Injection]:				http://www.programcreek.com/2014/02/spring-mvc-tutorial-setter-dependency-injection/
 [解决“Dynamic Web Module 3.0 requires Java 1.6 or newer.”错误]:		http://xiaoyaozjl.iteye.com/blog/1530010	
 [How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]:			http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
-
+[Eclipse下Java compiler level does not match the version of the installed Java project facet的问题]:	http://blog.csdn.net/cyq1984/article/details/6955384
 
