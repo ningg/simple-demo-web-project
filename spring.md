@@ -158,10 +158,11 @@
 * 后面`web-app`元素为servlet规范约束，其中配置的`xmlns`为建议内容；
 	* 上述`xmlns:xsi`通过后面URL唯一标识；
 	* `xsi:shcemaLocation`指定不同xmlns对应的校验文件；
-	* servlet规范对应的xmlns校验文件，官方建议是哪个？
-	* 上述`version="3.0"`是哪个地方约束的？
+	* servlet规范对应的xmlns校验文件，官方建议是哪个？[官网][JSR315]中Deployment Descriptor中指出servlet 3.0对应的校验文件是`.../web-app_3_0.xsd`；
+	* 上述`version="3.0"`是哪个地方约束的？[官网][JSR315]中Deployment Descriptor Diagram中指出`web-app`元素的`version`属性是必须的；
 	* 上述配置，除了`version`属性，其余配置都是固定的，需要记忆一下；
-	* 上述配置，针对Servlet 3.x规范有效，则Tomcat 6.x，由于只支持到Servlet 2.5，则上述开发的web应用，无法在Tomcat 6.x上使用，必须使用Tomcat 7.x + 的版本。
+	* 上述配置，针对Servlet 3.x规范有效，则Tomcat 6.x，由于只支持到Servlet 2.5，则上述开发的web应用，无法在Tomcat 6.x上使用，必须使用Tomcat 7.x + 的版本；
+* 上述`<context-param>`元素的使用，具体的含义？
 
 ###dispatcher-servlet.xml文件
 
@@ -283,3 +284,5 @@
 [How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse]:			http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
 [Eclipse下Java compiler level does not match the version of the installed Java project facet的问题]:	http://blog.csdn.net/cyq1984/article/details/6955384
 
+
+[JSR315]:									https://www.jcp.org/en/jsr/detail?id=315			"JSR 315: JavaTM Servlet 3.0 Specification"
