@@ -260,6 +260,23 @@
 
 
 
+##Spring中融合Redis
+
+目标：
+
+* Spring web工程中配置Redis数据源
+* 对Redis的基本操作
+
+
+详细信息参考：[Spring中集成Redis][Spring中集成Redis]
+
+
+
+
+
+
+
+
 
 
 
@@ -285,3 +302,6 @@
 
 
 [JSR315]:									https://www.jcp.org/en/jsr/detail?id=315			"JSR 315: JavaTM Servlet 3.0 Specification"
+
+
+[Spring中集成Redis]:						http://ningg.top/spring-with-redis/
