@@ -3,6 +3,20 @@
 基本的product protype、基本的web framework。
 
 
+整体上几点：
+
+* Maven管理的Spring工程的搭建，基本的demo
+	* 工程：[Spring demo with Maven][Spring demo with Maven]
+	* 说明文档：[Spring demo Readme][Spring demo Readme]
+* MyBatis 3.x基本demo
+	* 工程：[MyBatis 3.x demo][MyBatis 3.x demo]
+	* 说明文档：[MyBatis 3.x demo Readme][MyBatis 3.x demo Readme]
+* Spring与Redis融合，基本demo
+	* 工程：[Spring demo with Maven][Spring demo with Maven]
+
+
+
+	
 
 ##最简单的spring web项目
 
@@ -130,4 +144,14 @@ Maven 管理的 web project，在其他地方，作为Maven project导入时，�
 [Spring搭建 java web 的基本架子]:				http://ningg.top/spring-java-web/
 [java web简介]:									http://ningg.top/java-web-intro/
 [Web相关的Specifications]:						http://ningg.top/web-application-specifications/
+
+
+[Spring demo with Maven]:						./springwebdemo1 Maven Webapp
+[Spring demo Readme]:							./spring.md
+[MyBatis 3.x demo]:								./mybatisdemo1
+[MyBatis 3.x demo Readme]:						./mybatisdemo1/README.md
+
+
+
+
 

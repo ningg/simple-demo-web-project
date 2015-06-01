@@ -2,6 +2,9 @@ MyBatis使用梳理
 
 ##mybatisdemo1
 
+简单的MyBatis 3.x使用示例。
+
+
 ###创建数据库
 
 在MySQL中，创建表格：
